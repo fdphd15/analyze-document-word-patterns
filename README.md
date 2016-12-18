@@ -1,19 +1,19 @@
 analyze_document_word_patterns.py
 ======
-**analyze_document_word_patterns.py** is a script for taking a collection of 
-text documents (e.g. books) located in a hierarchical folder structure and 
-analyzing word patterns within the documents, such as the distribution of the
-length of the words in each document.  This project is an extension of a
-case study and homework problem on Language Processing from the HarvardX 
-course entitled "Using Python for Research" taught by JP Onnela and the PH526x 
-team.
+**analyze_document_word_patterns.py** is a script for analyzing a collection of 
+text documents (e.g. books) located in a hierarchical folder structure by 
+identifying word patterns within the documents, such as the word length 
+"fingerprint" associated with the language each document was written in.
+This project is an extension of a case study and homework problem on Language 
+Processing given as part of the HarvardX course entitled "Using Python for 
+Research" taught by JP Onnela and the PH526x team.
 
-An example is included that is based on the data provided in the course: a 
-set of famous books in several different languages (English, French, German, 
+This repository includes an example that uses the data provided in the course: 
+a set of famous books in several different languages (English, French, German, 
 and Portugese) that were obtained from The Gutenberg Project.  The example 
-code computes the word length distribution across all the documents, and
-visualizes the results through histograms and images. Each language has a 
-unique distribution of world lengths, a signature that can be used to
+code provided, analyze_doc_words.py, computes the word length distribution 
+across all the documents, and visualizes the results through histograms and 
+images. Each language has a unique word length distribution that can be used 
 classify unknown, test documents.
 
 ## Usage
