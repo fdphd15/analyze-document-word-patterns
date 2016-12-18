@@ -1,17 +1,32 @@
-# A script for computing statistics on a collection of documents (books) stored
-# in a hierarchical file structure.  Based on the lecture from Case Study #2 in
-# the Using Python for Research course by HarvardX and the associated HW#2 
-# by DataCamp.  This code has several significant updates from the course
-# version, including:
+#!/usr/bin/python3
+# Code name: analyze_doc_words.py 
+# Brief Description: A script for computing statistics on a collection of 
+# documents (books) stored in a hierarchical file structure.  Based on the 
+# lecture from Case Study #2 in the Using Python for Research course by 
+# HarvardX and the associated HW#2 by DataCamp.  This code has several 
+# significant updates from the course version, including:
 # 1) an expanded list of punctuations to skip, plus a bit better implementation
 #    for skipping punctuation (explicitly looks for punc + a space to left
 #    and/or right, depending on the nature of the punctuation
+# NOTE: 
+# Created on: December 16, 2016
+# Written by: Frederick D. Pearce
+# Code version: 0.1 on 12/17/2016 - Original version used to setup github repo
 
+# Copyright 2016 Frederick D. Pearce
+
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# http://www.apache.org/licenses/LICENSE-2.0
+
+## I) Import modules, all available via pip install
 from collections import Counter, defaultdict
 import os
 import matplotlib.pyplot as plt
 import pandas as pd
 
+## II) Define functions
 def read_doc(doc_path):
     """
     Read a document and return its text as a string. Replace newline, "\n", 
@@ -314,16 +329,16 @@ def plot_alldocs_word_len_img(doc_wordlens, doc_names, figfname, \
     plt.savefig(figfname)
 
 ##############################################################################
-# Run script below here
+# III) If this file is run from command line, execute script below here
 if __name__ == "__main__":
     ## Run script for computing statistics on documents in folder hierarchy
     ## Inputs
-    # Input params
+    # Input Parameters
     root_dir = "/Users/frederickpearce/Documents/PythonProjects/HarvardX/PythonForResearch/Language_Processing"
     doc_dir = "Books"
-    # Analysis params
+    # Analysis Parameters
     wordlen_minmax = (1, 16)
-    # Output params
+    # Output Parameters
     figfname1 = "docstats_bylang_hw2.png"
     docs2plot = ["Doc1", "Doc2"]
     figfname2 = "word_length_ave_bylang.png"
