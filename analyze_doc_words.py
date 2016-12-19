@@ -11,7 +11,9 @@
 # NOTE: 
 # Created on: December 16, 2016
 # Written by: Frederick D. Pearce
-# Code version: 0.1 on 12/17/2016 - Original version used to setup github repo
+# Code version: 0.1 on 12/17/2016 - Original version used to setup github repo.
+#               Includes code obtained/modified from Using Python for Research
+#               edX (HarvardX) lecture codes, as noted below.
 
 # Copyright 2016 Frederick D. Pearce
 
@@ -30,37 +32,18 @@ import pandas as pd
 def read_doc(doc_path):
     """
     Read a document and return its text as a string. Replace newline, "\n", 
-    and returns, "\r", escape character with a space.
+    and returns, "\r", escape character with a space. Modified after Using 
+    Python for Research lecture code on Language Processing.
     """
     with open(doc_path, "r", encoding="utf8") as current_file:
         text = current_file.read()
         text = text.replace("\n", " ").replace("\r", " ")
     return text
 
-def count_words(text):
-    """
-    Count the number of times each word occurs in text (str).  Return a 
-    dictionary where keys are unique words and values are the word counts.  
-    Input text is converted to lower-case, and all punctuations listed in
-    punc_to_skip are replaced by an empty space.
-    """
-    text = text.lower()
-    # these punc to skip are old, but not currently used...
-    punc_to_skip = [". ", ", ", "; ", ": ", " '", "' ", ' "', '" ' "?", "! ", \
-            "-", " (", ") "]
-    for ch in punc_to_skip:
-        text = text.replace(ch, " ")
-    word_counts = {}
-    for word in text.split(" "):
-        if word in word_counts:
-            word_counts[word] += 1
-        else:
-            word_counts[word] = 1
-    return word_counts
-
 def count_words_fast(text):
     """
-    Fast way to count the number of times each word occurs in text (str).  
+    Fast way to count the number of times each word occurs in text (str), 
+    modified from Using Python for Research lecture code on Langauge Processing.  
     Return a dictionary where keys are unique words and values are the word 
     counts. Input text is converted to lower-case, and all punctuation is 
     skipped. A word consisting of an empty string is NOT included in the 
@@ -113,24 +96,11 @@ def calc_doc_word_lengths(word_counts, wordlen_minmax):
     return wl_dist
 
 def calc_doc_word_stats(word_counts):
-    """Return number of unique words and word frequencies."""
+    """Return number of unique words and word frequencies, as in Using Python 
+    for Research lecture code from Case Study on Langauge Processing."""
     num_unique = len(word_counts)
     counts = word_counts.values()
     return (num_unique, counts)
-
-def calc_word_distribution(word_counts):
-    """Take the input word_counts dictionary and outputs a dictionary with
-    the same keys as those in word_counts (the number of times a group of 
-    words appears in the text), and values corresponding to the fraction of 
-    words that occur with more frequency than that key.
-    Taken from DataCamp exercise 2 that goes along with Case Study 2.
-    """
-    wc_mf = {}
-    wcv_list = list(word_counts.values())
-    sum_words = sum(wcv_list)
-    for k, v in word_counts.items():
-        wc_mf[k] = sum(i > v for i in wcv_list) / sum_words
-    return wc_mf
 
 def get_doc_stats(wordlen_minmax, root_dir):
     """Get statistics on each document in hierarchical folder structure with
