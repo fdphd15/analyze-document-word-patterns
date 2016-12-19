@@ -16,6 +16,8 @@ across all the documents, and visualizes the results through histograms and
 images. Each language has a unique word length distribution signature that can 
 be used to classify the language of unknown, test documents.
 
+![Example Figure](https://github.com/fdphd15/analyze-document-word-patterns/blob/master/word_length_alldocs_img.png)
+
 ## Usage
 * Download a copy from github
 
