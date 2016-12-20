@@ -9,31 +9,28 @@ Python for Research" by JP Onnela and the PH526x team.
 
 This script performs three basic tasks:
 1) Load each document and its metadata, 2) Analyze each document (measure
-features) and 3) Output results (histogram plots, images, reports). Step 1 
-closely follows the course code, it loads each text document marching through 
-the hierarchical folder structure.  
-In Step 2, the analysis of the text string within each done here focuses on 
-the occurance of words with different lengths.  The data is preprocessed in a 
-similar way, for example to separate out punctuation, and then analyzed to 
-calculate the value of various text features (predictors), such as the 
-occurance of words with different lengths (i.e. word length distribution).
-Several tools are included for visualizing the features extracted from each
-documents' text. 
-This code is part of a larger effort to build a core set of data science tools 
-in Python.
+features) and 3) Output results (histogram plots, images, reports). 
 
-The book data contained in this repository were obtained from the Language 
-Processing case study portion of the "Using Python for Research" course website
-They were originally sourced from the Gutenberg Project: 
-https://www.gutenberg.org 
+An example is included that analyzes book data in different languages.  This 
+dataset was provided as part of the Language Processing case study assignment 
+in the "Using Python for Research" course, and was originally sourced from the 
+Gutenberg Project: https://www.gutenberg.org 
 
-The example book data shown below has a root level labelled with the document type 
-(Books), a second level with document language (English, French, German, or 
-Portugese), a third level with author name, and a fourth with Book title.
-The example code provided, analyze_doc_words.py, computes the word length 
-distribution across all the documents, and visualizes the results through histograms and 
-images. Each language has a unique word length distribution signature that can 
-be used to classify the language of unknown, test documents.
+The code starts by loading the text contained within each document, marching 
+automatically through the provided hierarchical folder structure. The example 
+book data shown below has a root level named Books, a second level with 
+document language (English, French, German, or Portugese), a third level with 
+author name, and a fourth level with Book title.
+Next, the text string within each document is analyzed to extract certain
+features that describe it.  Here we deviate from the course and instead focus 
+on how frequently words with different lengths occur within each document.  
+The data is still preprocessed to separate out punctuation, prior to 
+calculating the word length distribution.  
+Finally, the output of the analysis is printed to the screen, and a couple of 
+figures are produced that show the word length distributions across all 
+documents in the form of an image (below) and as a line plot versus language.
+Note that each language is uniquely identified by a characteristic word length 
+distribution that can be used to classify unknown, test documents.
 
 ![Example Figure](https://github.com/fdphd15/analyze-document-word-patterns/blob/master/word_length_alldocs_img.png)
 
