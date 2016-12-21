@@ -4,11 +4,13 @@ analyze_document_word_patterns.py
 structure of text documents with the goal of identifying characteristic 
 text features (i.e. predictors) that can be used for document modeling (e.g. 
 classification). It performs three basic tasks:
+
 1) Load each document and any metadata that describes it, 
 2) Analyze each document by first preprocessing it, and then extracting text 
 features that describe its structure in meaningful ways, and 
-3) Write output as report printed to screen, and as histograms, images, etc. 
+3) Write outputs as a report printed to screen, and as histograms, images, etc. 
 written to file. 
+
 I hope this project grows into a full fledged text analytics toolbox, with 
 interesting new document data sets for testing, and exciting new tools for 
 analytics, visualizations, modeling, etc.
