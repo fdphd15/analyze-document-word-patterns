@@ -28,12 +28,12 @@ the document language. The data is first preprocessed to remove capitalization,
 separate out punctuation, etc., and then the word length distribution is 
 calculated and visualized.  
 
-Running the script with the example data produces the figure shown below, which
-shows the word length distribution for each document in the data set in an 
-image format. The x-axis of the image corresponds to the length of each word.  
-For example, "a document with only these words in quotes" would have a word 
-length distribution of [1: 1, 2: 1, 4: 2, 5: 2, 6: 1, 8: 1], since the sentence
-contains one word with one letter, one word with two letters, two words with 
+Running the script with the example data produces the figure below, showing the 
+word length distribution for each document in the data set in an image format. 
+The x-axis of the image corresponds to the length of each word.  For example, 
+"a document with only these words in quotes" would have a word length 
+distribution of [1: 1, 2: 1, 4: 2, 5: 2, 6: 1, 8: 1], since the sentence 
+contains one word with one letter, one word with two letters, two words with
 four letters, etc. 
 
 Each horizontal row of pixels in the image shows how the distribution of word 
