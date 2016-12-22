@@ -1,6 +1,6 @@
-analyze_document_word_patterns.py
+analyze_doc_words.py
 ======
-**analyze_document_word_patterns.py** is a script for analyzing patterns in the
+**analyze_doc_words.py** is a script for analyzing patterns in the
 structure of text documents with the goal of identifying characteristic 
 text features (i.e. predictors) that can be used for document modeling (e.g. 
 classification). It performs three basic tasks: 1) Load each document and any 
