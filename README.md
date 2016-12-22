@@ -40,12 +40,15 @@ horizontal row of the image shows the distribution of word lengths for a given
 book.  The y-axis denotes the language that each book was written in, with the 
 numbers denoting the id# of the first book written in each language.
 
-The most prominent characteristic of the word length distributions is that each 
-language has its own, unique distribution, like a fingerprint, which means this 
-text feature would be an excellent predictor for classifying document language, 
-at least for the languages we've analyzed thus far...
-It would be interesting to see if different types of documents, such as emails, 
-or newspaper articles show the same word length distribution dependency versus 
+The most prominent characteristic of the word length distributions is their 
+strong dependence on language, each language tightly clusters around its own 
+unique word length distribution (i.e. a structural fingerprint).  Thus, 
+analytics, or features, extracted from the word length distribution would 
+be excellent predictor(s) for classifying document language, at least for the 
+languages we've analyzed thus far...
+
+It would be interesting to see if different types of documents, such as emails 
+or newspaper articles, show the same word length distribution dependency versus 
 document language.
 
 ![Example Figure](https://github.com/fdphd15/analyze-document-word-patterns/blob/master/word_length_alldocs_img.png)
