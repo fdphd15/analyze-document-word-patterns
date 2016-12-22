@@ -17,14 +17,10 @@ analytics, visualizations, modeling, etc.
 
 This project was inspired by a case study and homework problem on Language 
 Processing that I worked on while a student in the HarvardX course on "Using
-Python for Research" by JP Onnela and the PH526x team. The example included 
-in this repository uses the same book data as the course, a set of famous 
-literary works written in different languages, which were originally obtained 
-from the Gutenberg Project: https://www.gutenberg.org.  The example data is 
-located in the "./Books" directory of this repository with the next folder 
-level identifying the document language (English, French, German, or 
-Portugese), the third level denotes the author name, and finally the file names
-correspond to the book title.
+Python for Research" by JP Onnela and the PH526x team. The example data 
+included in this repository (see Books dir) uses the same books data as the 
+course, a set of famous literary works written in different languages, which 
+were originally obtained from the Gutenberg Project: https://www.gutenberg.org.  
 
 The analysis performed here examines the distribution of word lengths across 
 all the documents, and also as a function of different categorical variables, 
