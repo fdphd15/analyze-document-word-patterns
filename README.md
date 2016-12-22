@@ -41,8 +41,8 @@ lengths varies for a given book, with the different colors denoting the # of
 words of a given length, normalized by the maximum # of words across all 
 word lengths. In the above example, this would lead to [1: 0.5, 2: 0.5, 3: 0, 
 4: 1, 5: 1, 6: 0.5, 7: 0, 8: 0.5]. Thus, the most frequent word length in each 
-document (row) is dark red (values of 1), while the minimum word length for 
-each document (values nearest zero) is dark blue .
+document (row) is dark red (value of 1), while the least frequent word length 
+in each document (value of zero) is dark blue .
  
 The y-axis of the image identifies the individual books by their id number, 
 which is sorted by language, such that the id number 1 shown in the figure 
