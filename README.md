@@ -33,8 +33,10 @@ is the example figure shown below.  This figure provides a detailed view of the
 visualized in the form of an image. The x-axis identifies the length of each 
 word (for example, "word" has four letters so a length of four, etc.), so each 
 horizontal row of the image shows the distribution of word lengths for a given 
-book.  The y-axis denotes the language that each book was written in, with the 
-numbers denoting the id# of the first book written in each language.
+book.  The y-axis identifies each book in the data set by their id number, 
+which have been sorted by language.  For example, the id number 1 corresponds
+to the first book written in English, the id number 8 denotes the first book 
+written in French, etc.
 
 The most prominent characteristic of the word length distributions is their 
 strong dependence on language, each language tightly clusters around its own 
