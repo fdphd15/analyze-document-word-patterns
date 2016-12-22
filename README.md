@@ -32,36 +32,40 @@ Running the script with the example data produces the figure below, showing the
 word length distribution for each document in the data set in an image format. 
 The x-axis of the image corresponds to the length of each word.  For example, 
 "a document with only these words in quotes" would have a word length 
-distribution of [1: 1, 2: 1, 4: 2, 5: 2, 6: 1, 8: 1], since the sentence 
-contains one word with one letter, one word with two letters, two words with
-four letters, etc. 
+distribution of [1: 1, 2: 1, 3: 0, 4: 2, 5: 2, 6: 1, 7: 0, 8: 1], since the 
+sentence contains one word with one letter, one word with two letters, zero 
+words with three letters, two words with four letters, etc. 
 
 Each horizontal row of pixels in the image shows how the distribution of word 
 lengths varies for a given book, with the different colors denoting the # of
-words with a given length, normalized by the maximum # of words across all 
-word lengths. This means the most frequent word length in each document (row) 
-is dark red (i.e. a value of 1). Conversely, the minimum word length for each 
-document (row value nearest zero) is dark blue.
+words of a given length, normalized by the maximum # of words across all 
+word lengths. In the above example, this would lead to [1: 0.5, 2: 0.5, 3: 0, 
+4: 1, 5: 1, 6: 0.5, 7: 0, 8: 0.5]. Thus, the most frequent word length in each 
+document (row) is dark red (values of 1), while the minimum word length for 
+each document (values nearest zero) is dark blue .
  
-The y-axis of the image shows how the normalized occurance of each word length 
-varies across all the books.  For example, the leftmost vertical column of the 
-image describes the relative frequency of words with only one letter. Documents 
-are organized along the y-axis of the image by their id number, which is sorted
-by language, such that the id number 1 shown in the figure corresponds to the 
-first book (row) written in English, the id number 8 denotes the first book 
-(row) written in French, etc.
+The y-axis of the image identifies the individual books by their id number, 
+which is sorted by language, such that the id number 1 shown in the figure 
+corresponds to the first book (row) written in English, the id number 8 denotes
+the first book (row) written in French, etc. 
+
+Examining a single column shows how the normalized occurance of each word 
+length varies across all the books.  For example, the leftmost vertical column 
+of the image describes the relative frequency of words with only one letter. 
+The proportion of words with only one letter is highest in Portugese (orange, 
+50-70% of max. value) while it is lowest for German (dark blue, less than 10%
+of max. value).
 
 The most prominent characteristic of the word length distributions is their 
-strong dependence on language, each document written in the same language 
-tightly clusters around its own unique word length distribution, a type of 
-structural fingerprint for each language.  Thus, analytics, or features, 
-derived from the word length distribution would be good predictor(s) for 
-classifying document language, at least for the languages we've analyzed thus 
-far...
+strong dependence on language. Each document written in the same language 
+has a very similar word length distribution, one type of structural fingerprint
+that identifies each language.  Thus, analytics, or features, derived from the
+word length distribution would be good predictor(s) for classifying document 
+language, at least for the languages we've analyzed thus far...
 
 It would be interesting to see if different types of documents, such as emails 
-or newspaper articles, show the same word length distribution dependency versus 
-document language.
+or newspaper articles, show the same distinguishing word length distribution 
+dependency versus document language.
 
 ![Example Figure](https://github.com/fdphd15/analyze-document-word-patterns/blob/master/word_length_alldocs_img.png)
 
