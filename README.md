@@ -58,7 +58,7 @@ of max. value).
 
 The most prominent characteristic of the word length distributions is their 
 strong dependence on language. Each document written in the same language 
-has a very similar word length distribution, one type of structural fingerprint
+has a very similar word length distribution, a type of structural fingerprint
 that identifies each language.  Thus, analytics, or features, derived from the
 word length distribution would be good predictor(s) for classifying document 
 language, at least for the languages we've analyzed thus far...
