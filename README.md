@@ -15,28 +15,40 @@ I hope this project grows into a full fledged text analytics toolbox, with
 interesting new document data sets for testing, and exciting new tools for 
 analytics, visualizations, modeling, etc.
 
-This project was inspired by a case study and homework problem on Language 
-Processing that I worked on while a student in the HarvardX course on "Using
-Python for Research" by JP Onnela and the PH526x team. The example data 
-included in this repository (see Books dir) uses the same books data as the 
-course, a set of famous literary works written in different languages, which 
-were originally obtained from the Gutenberg Project: https://www.gutenberg.org.  
+This project was inspired by a case study on Language Processing that I worked 
+on as part of the HarvardX course on "Using Python for Research" by JP Onnela 
+and the PH526x team. The example data included in this repository (see ./Books) 
+uses the same books data as the course, a set of famous literary works written 
+in different languages, which were originally obtained from the Gutenberg 
+Project: https://www.gutenberg.org.  
 
-The analysis performed here examines the distribution of word lengths across 
-all the documents, and also as a function of different categorical variables, 
-such as the document language. The data is first preprocessed to separate out 
-punctuation, etc., and then the word length distribution is calculated.  
+Description of Analysis Example
 
-Running the script using the example data produces several outputs, one of which
-is the example figure shown below.  This figure provides a detailed view of the 
-(normalized) word length distribution for every document in the data set, 
-visualized in the form of an image. The x-axis identifies the length of each 
-word (for example, "word" has four letters so a length of four, etc.), so each 
-horizontal row of the image shows the distribution of word lengths for a given 
-book.  The y-axis identifies each book in the data set by their id number, 
-which have been sorted by language.  For example, the id number 1 corresponds
-to the first book written in English, the id number 8 denotes the first book 
-written in French, etc.
+The analysis example included here examines the distribution of word lengths 
+across all example documents, and as a function of different categorical 
+variables, such as the document language. The data is first preprocessed to 
+remove capitalization, separate out punctuation, etc., and then the word length 
+distribution is calculated and visualized.  
+
+Running the example produces several outputs, one of which is the figure shown 
+below.  This figure is an image view of the word length distribution for each 
+document in the data set. The x-axis of the image corresponds to the length of 
+each word.  For example, "a document with only these words in quotes" would 
+have a word length distribution of [1: 1, 2: 1, 4: 2, 5: 2, 6: 1, 8: 1], since 
+the sentence contains one word with one letter, one word with two letters, two
+words with four letters, etc. 
+
+Thus, each horizontal row of the image shows how the distribution of word 
+lengths varies for a given book, while each vertical column of the image shows
+how a given word length varies across all books.  For example, the leftmost 
+vertical column of the image describes the relative frequency of words with a
+word length of one (i.e. words with only one letter).
+
+The documents are organized along the y-axis of the image by their id number, 
+which has been sorted by language, such that, the id number 1 shown in the
+figure corresponds to the first book (row) written in English, the id number 8
+denotes the first book (row) written in French, etc.
+
 
 The most prominent characteristic of the word length distributions is their 
 strong dependence on language, each language tightly clusters around its own 
