@@ -36,12 +36,12 @@ length distribution of [1: 1, 2: 1, 4: 2, 5: 2, 6: 1, 8: 1], since the sentence
 contains one word with one letter, one word with two letters, two words with 
 four letters, etc. 
 
-Thus, each horizontal row of the image shows how the distribution of word 
+Each horizontal row of pixels in the image shows how the distribution of word 
 lengths varies for a given book, with the different colors denoting the # of
 words with a given length, normalized by the maximum # of words across all 
-word lengths, meaning the most frequent word length in each document (row) will 
-be colored dark red denoting a value of 1. Conversely, the minimum word length
-for each document (row value nearest zero) will be dark blue.
+word lengths. This means the most frequent word length in each document (row) 
+is dark red (i.e. a value of 1). Conversely, the minimum word length for each 
+document (row value nearest zero) is dark blue.
  
 The y-axis of the image shows how the normalized occurance of each word length 
 varies across all the books.  For example, the leftmost vertical column of the 
